@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\GreetingsController;
+use App\Http\Controllers\PortfolioController;
 
-Route::get('/', [GreetingsController::class, 'welcome']);
-
-Route::get('/greet/{name}/{npm}', [GreetingsController::class, 'greet']);
+Route::get('/', [PortfolioController::class, 'home']);
+Route::get('/profil', [PortfolioController::class, 'profil']);
+Route::get('/pendidikan', [PortfolioController::class, 'pendidikan']);
+Route::get('/keahlian', [PortfolioController::class, 'keahlian']);
